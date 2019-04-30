@@ -2,8 +2,6 @@ body
   background: #F7F5FA
   font-family: 'DIN Pro'
 
-
-
 //header
 
 .header
@@ -50,14 +48,19 @@ body
         left: - 46px
         width: 54px
         height: 54px
+        display: -webkit-box
+        display: -ms-flexbox
         display: flex
+        -webkit-box-align: center
+        -ms-flex-align: center
         align-items: center
+        -webkit-box-pack: center
+        -ms-flex-pack: center
         justify-content: center
 
         img
           width: 20px
           height: 20px
-
 
 // block tips
 
@@ -69,14 +72,21 @@ body
     width: 100%
     object-fit: cover
     object-position: center
+    -o-object-fit: cover
+    -o-object-position: center
 
   &_items
     margin: 0 auto
     position: relative
     top: -100px
     max-width: 972px
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
     flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
 
     div
@@ -86,6 +96,7 @@ body
       border: 1px solid #EDEDED
       background-color: #FFF
       box-sizing: border-box
+      -webkit-box-sizing: border-box
 
       h4
         font-size: 12px
@@ -138,10 +149,17 @@ body
     margin-bottom: 60px
 
   .advantages_items
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: flex-start
+    -ms-flex-align: flex-start
     align-items: flex-start
+    -webkit-box-pack: space-between
+    -ms-flex-pack: space-between
     justify-content: space-between
     flex-wrap: wrap
+    -ms-flex-wrap: wrap
 
     div
       width: 345px
@@ -153,6 +171,8 @@ body
         height: 52px
         object-fit: contain
         object-position: center
+        -o-object-fit: contain
+        -o-object-position: center
 
       h4
         position: relative
@@ -206,8 +226,14 @@ body
 
       span
         position: absolute
+        display: -webkit-box
+        display: -ms-flexbox
         display: flex
+        -webkit-box-align: center
+        -ms-flex-align: center
         align-items: center
+        -webkit-box-pack: center
+        -ms-flex-pack: center
         justify-content: center
         font-family: 'Roboto', sans-serif
         font-weight: 500
@@ -231,10 +257,14 @@ body
       font-size: 24px
       line-height: 35px
       padding-bottom: 12px
+      -webkit-transition: 0.3s
+      -o-transition: 0.3s
       transition: 0.3s
       cursor: pointer
 
       &:active, &:focus
+        -webkit-transition: 0.3s
+        -o-transition: 0.3s
         transition: 0.3s
         border-bottom-color: rgba(#F47821, .7)
 
@@ -250,9 +280,13 @@ body
       margin-top: 60px
       padding: 20px 0 16px
       cursor: pointer
+      -webkit-transition: 0.3s
+      -o-transition: 0.3s
       transition: 0.3s
 
       &:hover
+        -webkit-transition: 0.3s
+        -o-transition: 0.3s
         transition: 0.3s
         background: rgba(#fff, .8)
 
@@ -261,11 +295,15 @@ body
 
   .advantages
     .advantages_items
+      -webkit-box-pack: space-around
+      -ms-flex-pack: space-around
       justify-content: space-around
       flex-wrap: wrap
+      -ms-flex-wrap: wrap
 
   .tips_items div
     width: 90%
+    height: auto
 
 @media (max-width: 768px)
 
@@ -275,8 +313,14 @@ body
   .tips
     padding-bottom: 0
 
-  .tips_items div
-    width: 96%
+    img
+      height: 300px
+
+    &_items
+      top: 0
+
+      div
+        width: 100%
 
   .similar
     padding: 40px 0 50px
@@ -299,3 +343,27 @@ body
         top: -10px
         width: 40px
         height: 40px
+
+@media (max-width: 480px)
+  .header_inner h1
+    font-size: 35px
+    line-height: 40px
+
+
+  .tips_items div p
+    font-size: 20px
+    line-height: 25px
+
+
+  .advantages h2,
+  .similar_inner h3
+    font-size: 30px
+
+  .form
+    h3
+      font-size: 30px
+
+    form .form_filed
+      font-size: 16px
+      line-height: 20px
+      padding-bottom: 6px

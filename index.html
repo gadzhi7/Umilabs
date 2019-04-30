@@ -86,14 +86,14 @@
     <h3>Теперь расскажите о себе</h3>
     <form action="">
       <label for="name_lastname"><span>1</span>Фамилия и имя</label>
-      <input id="name_lastname" class="form_filed" type="text" name="name_lastname" placeholder="Сидоров Александр">
+      <input id="name_lastname" class="form_filed" type="text" name="name_lastname" placeholder="Сидоров Александр" minlength="5" required>
       <label for="form_mail"><span>2</span>Электронная почта</label>
-      <input id="form_mail" class="form_filed" type="mail" name="mail" placeholder="Sidorov@yandex.ru">
+      <input id="form_mail" class="form_filed" type="email" name="mail" placeholder="Sidorov@yandex.ru" required>
       <label for="form_phone"><span>3</span>Телефон</label>
-      <input id="form_phone" class="form_filed" type="tel" name="phone" placeholder="+7 (999)-328-14-20">
+      <input id="form_phone" class="form_filed" type="tel" pattern="^\+7{1}\d{3}\d{3}\d{2}\d{2}$" name="phone" placeholder="+7 (999)-328-14-20" maxlength="11" required>
       <label for="form_message"><span>4</span>Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?</label>
-      <textarea id="form_message" class="form_filed" name="message" placeholder="Свой проект по созданию универсальной инфраструктуры строительства"></textarea>
-      <input class="form_submit" type="button" value="Отправить">
+      <textarea id="form_message" class="form_filed" name="message" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" minlength="5" required></textarea>
+      <input class="form_submit" type="submit" value="Отправить">
     </form>
 
   </div>

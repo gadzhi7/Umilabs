@@ -47,8 +47,14 @@ body {
   left: -46px;
   width: 54px;
   height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .header_inner a span img {
@@ -64,14 +70,21 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  -o-object-fit: cover;
+  -o-object-position: center;
 }
 .tips_items {
   margin: 0 auto;
   position: relative;
   top: -100px;
   max-width: 972px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .tips_items div {
@@ -81,6 +94,7 @@ body {
   border: 1px solid #EDEDED;
   background-color: #FFF;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 .tips_items div h4 {
   font-size: 12px;
@@ -131,10 +145,17 @@ body {
   margin-bottom: 60px;
 }
 .advantages .advantages_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 }
 .advantages .advantages_items div {
   width: 345px;
@@ -146,6 +167,8 @@ body {
   height: 52px;
   object-fit: contain;
   object-position: center;
+  -o-object-fit: contain;
+  -o-object-position: center;
 }
 .advantages .advantages_items div h4 {
   position: relative;
@@ -198,8 +221,14 @@ body {
 }
 .form form label span {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -223,10 +252,14 @@ body {
   font-size: 24px;
   line-height: 35px;
   padding-bottom: 12px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
 }
 .form form .form_filed:active, .form form .form_filed:focus {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   border-bottom-color: rgba(244, 120, 33, 0.7);
 }
@@ -242,21 +275,29 @@ body {
   margin-top: 60px;
   padding: 20px 0 16px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .form form .form_submit:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   background: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 1100px) {
   .advantages .advantages_items {
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
     justify-content: space-around;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
   }
 
   .tips_items div {
     width: 90%;
+    height: auto;
   }
 }
 @media (max-width: 768px) {
@@ -267,9 +308,14 @@ body {
   .tips {
     padding-bottom: 0;
   }
-
+  .tips img {
+    height: 300px;
+  }
+  .tips_items {
+    top: 0;
+  }
   .tips_items div {
-    width: 96%;
+    width: 100%;
   }
 
   .similar {
@@ -294,6 +340,31 @@ body {
     top: -10px;
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .header_inner h1 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .tips_items div p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .advantages h2,
+.similar_inner h3 {
+    font-size: 30px;
+  }
+
+  .form h3 {
+    font-size: 30px;
+  }
+  .form form .form_filed {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 6px;
   }
 }
 
