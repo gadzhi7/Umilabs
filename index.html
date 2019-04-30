@@ -12,8 +12,10 @@
   <meta name="geo.region" content="RU-Махачкала" />
 
   <title>Umilabs</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link href="css/fonts.css" rel="stylesheet">
+  <link href="css/reset.css" rel="stylesheet">
 
-  <link rel="icon" href="img/logo.png" type="image/png">
   <link href="css/screen.css" rel="stylesheet">
 
   <script src="js/script.js" type="text/javascript"></script>
@@ -25,7 +27,7 @@
     <div class="header_inner">
       <h1>Ты готов стать профессионалом?</h1>
       <h3>Мы ищем <span>талантов</span> и <span>саппортов</span> в команду. Решите на какую категорию вы претендуете.</h3>
-      <a href="">
+      <a href="#form">
         <span>
           <img src="img\plus.svg" alt="fill up">
         </span>
@@ -80,7 +82,7 @@
       </div>
     </div>
   </div>
-  <div class="form">
+  <div class="form" id="form">
     <h3>Теперь расскажите о себе</h3>
     <form action="">
       <label for="name_lastname"><span>1</span>Фамилия и имя</label>
@@ -91,7 +93,7 @@
       <input id="form_phone" class="form_filed" type="tel" name="phone" placeholder="+7 (999)-328-14-20">
       <label for="form_message"><span>4</span>Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?</label>
       <textarea id="form_message" class="form_filed" name="message" placeholder="Свой проект по созданию универсальной инфраструктуры строительства"></textarea>
-      <input class="form_submit" type="submit" value="Отправить">
+      <input class="form_submit" type="button" value="Отправить">
     </form>
 
   </div>

@@ -1,10 +1,6 @@
 body {
   background: #F7F5FA;
-  font-family: DIN Pro;
-}
-
-input, textarea {
-  outline: none;
+  font-family: "DIN Pro";
 }
 
 .header {
@@ -12,7 +8,7 @@ input, textarea {
   padding: 165px 0 125px;
 }
 .header_inner {
-  width: 760px;
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
 }
@@ -20,12 +16,15 @@ input, textarea {
   font-size: 48px;
   line-height: 54px;
   color: #222;
+  font-weight: normal;
 }
 .header_inner h3 {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: #4A4556;
+  font-weight: normal;
+  margin: 24px 0 30px;
 }
 .header_inner h3 span {
   font-weight: bold;
@@ -35,7 +34,7 @@ input, textarea {
   position: relative;
   color: #222;
   text-transform: uppercase;
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 16px;
   text-decoration: none;
   font-weight: bold;
@@ -70,7 +69,7 @@ input, textarea {
   margin: 0 auto;
   position: relative;
   top: -100px;
-  width: 972px;
+  max-width: 972px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -87,6 +86,8 @@ input, textarea {
   font-size: 12px;
   color: #F47821;
   text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 .tips_items div p {
   font-size: 24px;
@@ -99,39 +100,46 @@ input, textarea {
   padding: 80px 0 100px;
 }
 .similar_inner {
-  width: 773px;
+  padding: 0 15px;
+  max-width: 773px;
   margin: 0 auto;
 }
 .similar_inner h3 {
   font-size: 48px;
   color: #222;
   text-align: center;
+  font-weight: normal;
 }
 .similar_inner p {
   margin-top: 24px;
   color: #4E4D53;
   font-size: 16px;
   line-height: 26px;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
 }
 
 .advantages {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 120px 0 160px;
+  padding: 120px 0;
   color: #000;
 }
 .advantages h2 {
   font-size: 40px;
   text-align: center;
+  font-weight: normal;
+  margin-bottom: 60px;
 }
 .advantages .advantages_items {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .advantages .advantages_items div {
   width: 345px;
+  padding: 0 10px;
+  margin-bottom: 40px;
 }
 .advantages .advantages_items div img {
   width: 52px;
@@ -155,6 +163,12 @@ input, textarea {
   top: 22px;
   left: 0;
 }
+.advantages .advantages_items div p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #4E4D53;
+}
 
 .form {
   background: #161616;
@@ -166,15 +180,18 @@ input, textarea {
   text-align: center;
   font-size: 40px;
   color: #FFF;
+  font-weight: normal;
 }
 .form form {
-  width: 575px;
+  max-width: 575px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 .form form label {
   font-size: 16px;
   line-height: 25px;
   color: #FFF;
+  font-weight: bold;
   margin: 65px 0 24px;
   display: block;
   position: relative;
@@ -184,7 +201,7 @@ input, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #F47821;
@@ -202,14 +219,21 @@ input, textarea {
   border-bottom: 2px solid rgba(247, 248, 250, 0.1);
   resize: vertical;
   color: #FFFFFF;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   line-height: 35px;
+  padding-bottom: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.form form .form_filed:active, .form form .form_filed:focus {
+  transition: 0.3s;
+  border-bottom-color: rgba(244, 120, 33, 0.7);
 }
 .form form .form_submit {
   background: #FFF;
   border-radius: 30px;
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 14px;
   color: #F47821;
   text-transform: uppercase;
@@ -217,6 +241,60 @@ input, textarea {
   border: none;
   margin-top: 60px;
   padding: 20px 0 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form form .form_submit:hover {
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1100px) {
+  .advantages .advantages_items {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .tips_items div {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 100px 0 65px;
+  }
+
+  .tips {
+    padding-bottom: 0;
+  }
+
+  .tips_items div {
+    width: 96%;
+  }
+
+  .similar {
+    padding: 40px 0 50px;
+  }
+
+  .advantages {
+    padding: 60px 0;
+    color: #000;
+  }
+
+  .form {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .form form label {
+    padding-left: 50px;
+  }
+  .form form label span {
+    font-size: 16px;
+    left: 0;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /*# sourceMappingURL=screen.css.map */
